@@ -1,0 +1,18 @@
+@import "neat/app/assets/stylesheets/_neat-helpers.scss";
+
+// Neat Overrides
+$column: rem(120);
+$gutter: rem(12);
+$grid-columns: 12;
+$max-width: 100%;
+
+// Neat Breakpoints
+$mobile-size: rem(616);
+$tablet-size: rem(1154);
+$desktop-size: rem(1400);
+$large-size: rem(2000);
+
+$mobile: new-breakpoint(max-width $mobile-size 4);
+$tablet: new-breakpoint(max-width $tablet-size 8);
+$desktop: new-breakpoint(max-width $desktop-size);
+$large-screen: new-breakpoint(max-width $large-size min-width $desktop-size);

@@ -23,18 +23,18 @@
 	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-
-	<div class="hero-unit">
-	  <h1>'Allo, 'Allo!</h1>
-	  <p>You now have</p>
-
-	  <ul>
-	  <li>HTML5 Boilerplate</li>
-	  <li>Sass</li>
-	  <li>Velocity.js</li>
-	  <li>Fastclick.js</li>
-
-	  </ul>
+	<div class="wrapper">
+		<header>
+			<h1>lise kyle chapman</h1>
+			<h3>developer + designer</h3>
+		</header>
+		<section class="hero-wrapper">
+			<div class="hero">
+			</div>
+		</section>
+		<footer>
+			email
+		</footer>
 	</div>
 
 	<!-- build:js(.) scripts/vendor.js -->
@@ -56,10 +56,37 @@
 	  	ga('create','UA-XXXXX-X');ga('send','pageview');
 	</script>
 
-		<!-- build:js({app,.tmp}) scripts/main.js -->
-		<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
-		<script src="scripts/main.js"></script>
-		<!-- endbuild -->
+	<!-- build:js({app,.tmp}) scripts/main.js -->
+	<script src="scripts/main.js"></script>
+	<!-- endbuild -->
+
+	<!-- WebFont -->
+	<script>
+		WebFontConfig = {
+			typekit: {
+				id:  'bno4iad'
+			},
+			fontdeck: {
+				id: '55665'
+			}
+		};
+		(function() {
+		  	var wf = document.createElement('script');
+		  	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		  	wf.type = 'text/javascript';
+		  	wf.async = 'true';
+		  	var s = document.getElementsByTagName('script')[0];
+		  	s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
+
+	<!-- Scripts -->
+	<script>
+		$(document).ready(function() {
+			FastClick.attach(document.body);
+		});
+	</script>
 
 </body>
 </html>
