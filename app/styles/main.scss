@@ -3,8 +3,13 @@
 @import "neat/app/assets/stylesheets/_neat.scss";
 // endbower
 
+// Colors
+$bg: #FAFAFA;
+
+// Fonts
+
 body {
-  background: #fafafa;
+  background: $bg;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
 }
