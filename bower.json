@@ -7,6 +7,8 @@
     "neat": "~1.7.2",
     "normalize-css-sass": "~3.0.4",
     "velocity": "~1.2.2",
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "threejs": "*",
+    "threestrap": "~0.0.10"
   }
 }

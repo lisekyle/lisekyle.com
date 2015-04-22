@@ -20,7 +20,7 @@
 body {
     background: $bg;
     font-family: $maison-neue;
-    color: #333;
+    color: $dark-grey;
 }
 
 .wrapper {
@@ -38,11 +38,23 @@ body {
 
 h1 {
     font-size: rem(30);
-    font-family: $tisa;
+    font-family: $leitura;
+    font-weight: 700;
+    margin-bottom: rem(25);
 }
 
 h3 {
-    font-size: rem(18);
+    font-size: rem(12);
+    font-family: $soleil;
+    font-weight: 300;
+    margin-top: rem(25);
+    letter-spacing: rem(2);
+    text-transform: uppercase;
+}
+
+a {
+    color: $dark-grey;
+
 }
 
 header, footer {
@@ -53,6 +65,19 @@ header, footer {
     @include order(0);
     @include flex(0 1 auto);
     @include align-self(auto);
+}
+
+header {
+    padding: rem(40) 0;
+
+    div.line {
+        height: rem(3);
+        width: rem(30);
+        background-color: $blue;
+    }
+
+
+
 }
 
 section.hero-wrapper {
@@ -70,9 +95,19 @@ section.hero-wrapper {
         height: 100%;
         width: 100%;
     }
-
-
 }
+footer {
+    padding: rem(35) 0;
+
+    ul {
+        font-size: rem(10);
+        li {
+            display: inline-block;
+
+        }
+    }
+}
+
 
 
 .browsehappy {
