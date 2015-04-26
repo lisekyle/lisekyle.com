@@ -3,7 +3,6 @@
 // Vendors
 // ========================================
 // bower:scss
-@import "normalize-css-sass/_normalize.sass";
 @import "bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "neat/app/assets/stylesheets/_neat.scss";
 // endbower
@@ -18,9 +17,17 @@
 
 
 body {
+    margin: 0;
+    padding: 0;
     background: $bg;
     font-family: $maison-neue;
     color: $dark-grey;
+}
+
+canvas {
+    @include position(absolute);
+    top: 0;
+    z-index: -1;
 }
 
 .wrapper {
@@ -68,16 +75,13 @@ header, footer {
 }
 
 header {
-    padding: rem(40) 0;
+    padding: rem(30) 0;
 
     div.line {
         height: rem(3);
         width: rem(30);
         background-color: $blue;
     }
-
-
-
 }
 
 section.hero-wrapper {
@@ -96,19 +100,19 @@ section.hero-wrapper {
         width: 100%;
     }
 }
+
 footer {
-    padding: rem(35) 0;
+    padding: rem(20) 0;
 
     ul {
         font-size: rem(10);
+
         li {
             display: inline-block;
-
+            margin-right: rem(5);
         }
     }
 }
-
-
 
 .browsehappy {
     margin: 0.2rem 0;
