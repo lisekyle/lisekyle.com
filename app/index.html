@@ -30,17 +30,14 @@
 			<h3>developer + designer</h3>
 		</header>
 		<section class="hero-wrapper">
-			<div class="circle">
-			</div>
 		</section>
 		<footer>
 			<ul>
 				<li><a href="mailto:lisekyle@gmail.com">email</a></li>
-				<li><a href="#">dribbble</a></li>
-				<li><a href="#">github</a></li>
-				<li><a href="#">linkedin</a></li>
-				<li><a href="#">codepen</a></li>
-				<li><a href="#">tumblr</a></li>
+				<li><a href="https://dribbble.com/lisekylechapman" target="_blank">dribbble</a></li>
+				<li><a href="https://github.com/lisekyle" target="_blank">github</a></li>
+				<li><a href="https://www.behance.net/lisekyle" target="_blank">behance</a>
+				<li><a href="http://www.linkedin.com/in/lisekylechapman" target="_blank">linkedin</a></li>
 			</ul>
 		</footer>
 	</div>
@@ -158,15 +155,16 @@
 			    };
 			}
 
-			var world = new Threejs();
-			world.init();
+			var env = new Threejs();
+			env.init();
 
 			function Tetrahedron() {
+				var lineWidth = 1;
 			    this.size = Math.random();
 
 			    this.geometry = new THREE.TetrahedronGeometry(this.size*40, 0);
 			    this.geometry.applyMatrix( new THREE.Matrix4().makeRotationAxis( new THREE.Vector3( 4, 0, -1 ).normalize(), Math.atan( Math.sqrt(2)) ) );
-			    this.material = new THREE.MeshLambertMaterial({color : this.color, shading: THREE.FlatShading,  wireframe: true});
+			    this.material = new THREE.MeshLambertMaterial({color : this.color, shading: THREE.FlatShading,  wireframe: true, wireframeLinewidth:lineWidth});
 			    this.shape = new THREE.Mesh(this.geometry, this.material);
 			    this.shape.position.y = Math.floor((Math.random() * 2000) + 1)-1000;
 			    this.shape.position.z = Math.floor((Math.random() * 2000) + 1)-1000;
